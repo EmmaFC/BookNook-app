@@ -19,10 +19,13 @@ class Header extends Component
     */
    public function __construct()
    {
-       $this->user = Auth::user();
-       $this->profile_name = $this->user->name;
-       $this->profile_image = $this->user->image; 
-       $this->id = $this->user->id;
+       if (Auth::user()) {
+           $this->user = Auth::user();
+           $this->profile_name = $this->user->name;
+           $this->profile_image = $this->user->image; 
+           $this->id = $this->user->id;
+       }
+       
    }
 
     /**
