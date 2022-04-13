@@ -15,7 +15,7 @@
         </button> --}}
 
         {{-- <nav class="flex flex-row justify-end"> --}}
-    <nav :class="{'flex': open, 'hidden': !open}" class="flex-col flex-grow hidden md:flex md:justify-end md:flex-row">
+    <nav :class="{'flex': !open, 'hidden': !open}" class="flex-col flex-grow hidden md:flex md:justify-end md:flex-row">
         @guest
             @if (Route::has('login') || Route::has('register'))
             <a class="px-4 nav-text-dark focus:outline-none focus:shadow-outline" href="{{ route('admin-login') }}">
