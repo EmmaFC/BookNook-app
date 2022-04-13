@@ -2,7 +2,7 @@
   <footer class="body-font navbar-dark shadow-sm {{-- b-0 py-4 px-5 --}}">
     
 
-      <div class="container flex flex-row justify-between">
+      <div class="container-3 flex flex-row justify-between">
        
         <div>
             <p class="text-white text-sm text-center">© 2022 Copyright —

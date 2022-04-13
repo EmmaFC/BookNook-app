@@ -13,7 +13,13 @@ class UserController extends Controller
 {
     public function index ()
     {
-        $users = User::all();
+        $all_users = User::all();
+        $users = array();
+        foreach ($all_users as $user) {
+            if ($user->hasRole('user')) {
+                array_push($users, $user);
+            }
+        }
         return view('pages.admin.users.index', compact('users'));
     }
 
@@ -45,6 +51,34 @@ class UserController extends Controller
         return view('pages.admin.users.edit', compact('user', 'roles', 'permissions'));
     }
 
+    public function profile_edit (User $user)
+    {
+        return view('pages.edit-profile', compact('user'));
+    }
+
+    public function profile_update (Request $request, User $user)
+    {
+        $validated = $request->validate([
+            'name' => ['required', 'min:3'],
+            // 'image' => ['required', 'min:3'],
+            'description' => ['required', 'min:3'],
+            'email' => ['required', 'min:3'],
+        ]);
+        $user->update($validated);
+        return $this->show($user->id);
+    }
+
+    public function password_edit (User $user)
+    {
+        return view('pages.edit-password', compact('user'));
+    }
+
+    public function password_update (Request $request, User $user)
+    {
+        $validated = $request->validate(['password' => ['required', 'min:8']]);
+        $user->update($validated);
+        return $this->show($user->id);
+    }
 
     public function update (Request $request, User $user)
     {

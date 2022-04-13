@@ -6,7 +6,7 @@
     <body>
         <div class="flex flex-col min-h-screen">   
             <x-header  />
-            <main class="main flex-grow justify-center items-center">
+            <main class="main flex flex-grow justify-center items-center">
                 @yield('content')
             </main>
             <x-footer />

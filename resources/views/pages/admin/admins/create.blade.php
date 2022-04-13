@@ -3,7 +3,7 @@
 
     <div class="py-12 w-full">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <form action="{{ route('admin.users.store') }}" method="POST" {{-- enctype="multipart/form-data" --}}>
+            <form action="{{ route('admin.admins.store') }}" method="POST" {{-- enctype="multipart/form-data" --}}>
                 @csrf
                 <div class="container-second">
                     <div class="container-second">
@@ -62,7 +62,7 @@
 
                     </div>
                     <div class="container-second mt-4 mb-4 d-flex justify-content-between align-content-center">
-                        <a class="px-4 py-2 rounded-md bg-gray-400" href="{{ route('admin.users.index') }}">Volver a Usuarios</a>
+                        <a class="px-4 py-2 rounded-md bg-gray-400" href="{{ route('admin.admins.index') }}">Volver a Admins</a>
                         <button type="submit" class="px-4 py-2 rounded-md bg-gray-400"><h4 class="text-link-dark">Guardar</h4></button>
                     </div>
                 </div>

@@ -11,13 +11,21 @@
                         <img class="profile-image-m" src="{{ Auth::user()->image }}" />
                    {{--  </div> --}}
                     <div class="text-less-width self-center flex flex-col"> 
-                        <div class="title">{{ Auth::user()->name }}</div>
-                        <div class="text">{{ Auth::user()->description }}</div>
+                        <div>
+                            <div class="title">{{ Auth::user()->name }}</div>
+                            <button class="px-6 py-2 rounded-md flex flex-row bg-gray-600 hover:text-gray-100" type="submit"> 
+                                <a class="text-button-dark  hover:text-white transition duration-200 ease-linear" href="{{ route('profile.users.edit', Auth::user()->id )}}">Editar perfil</a>
+                            </button>
+                        </div>
+                        <div>
+                            <div class="text">{{ Auth::user()->description }}</div>
+                        </div>
                     </div>
                 </div>
 
               <div id="fav_user_books_section">
                   <div class="column container-second">
+                      @if (Auth::user()->hasRole('user'))
                         <div class="container flex justify-start">
                             <h1 class="title">{{ __('Tus favoritos') }}</h1>
                         </div>
@@ -33,7 +41,7 @@
                             />
 
                             @endforeach
-                        
+                        @endif
                         </div>
                     </div>
                 </div>

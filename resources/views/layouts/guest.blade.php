@@ -2,7 +2,7 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
     <x-head/>
-    {{-- <div style="background-image: url('{{ $random_book->cover }}'); background-repeat:no-repeat; background-size:cover;"> --}}
+    <div style="background-image: url('{{ $random_book->cover }}'); background-repeat:no-repeat; background-size:cover;">
         <body>
             <div class="flex flex-col min-h-screen">   
                 <x-header  />
@@ -13,6 +13,6 @@
             </div>
             @livewireScripts
         </body>
-    {{-- </div> --}}
+    </div>
 
 </html>

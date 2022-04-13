@@ -12,6 +12,7 @@ use App\Http\Controllers\FavoritesController;
 use App\Http\Controllers\Admin\BookController;
 use App\Http\Controllers\Admin\RoleController;
 use App\Http\Controllers\Admin\UserController;
+use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\PermissionController;
 use App\Http\Controllers\Auth\NewPasswordController;
@@ -54,12 +55,14 @@ Route::get('/verify-email', [EmailVerificationPromptController::class, '__invoke
 Route::post('/verify-email/{id}/{hash}', [VerifyEmailController::class, '__invoke'])->name('verification.verify'); 
 Route::get('/sanctum/csrf-cookie', [CsrfCookieController::class, 'show'])->name('Laravel\Sanctum'); 
 
-
     Route::get('/admin-login', [UserController::class, 'admin'])->name('admin-login');
-
 
    /*  Route::get('/home', [HomeController::class, 'index'])->name('home'); */
     Route::get('/profile/{id}', [UserController::class, 'show'])->name('profile');
+    Route::get('/profile/{user}/edit', [UserController::class, 'profile_edit'])->name('profile.users.edit');
+    Route::patch('/profile/{user}', [UserController::class, 'profile_update'])->name('profile.users.update');
+    Route::get('/password/{user}/edit', [UserController::class, 'password_edit'])->name('password.users.edit');
+    Route::patch('/password/{user}', [UserController::class, 'password_update'])->name('password.users.update');
     Route::get('/book/{book}', [BookController::class, 'show'])->name('book-detail');
     Route::get('/checkfavorite/{id}', [FavoritesController::class, 'checkFavorite'])->name('checkfavorite');
     Route::get('/checkranking/{id}', [RankingController::class, 'checkRanking'])->name('checkranking');
@@ -81,6 +84,14 @@ Route::middleware(['auth', 'role:admin'])->name('admin.')->prefix('admin')->grou
     Route::delete('/users/{user}/roles/{role}', [UserController::class, 'removeRole'])->name('users.roles.remove');
     Route::post('/users/{user}/permissions', [UserController::class, 'givePermission'])->name('users.permissions');
     Route::delete('/users/{user}/permissions/{permission}', [UserController::class, 'revokePermission'])->name('users.permissions.revoke');
+
+    Route::resource('/admins', AdminController::class);
+
+    Route::post('/admins/{admin}/roles', [AdminController::class, 'assignRole'])->name('admins.roles');
+    Route::delete('/admins/{admin}/roles/{role}', [AdminController::class, 'removeRole'])->name('admins.roles.remove');
+    Route::post('/admins/{admin}/permissions', [AdminController::class, 'givePermission'])->name('admins.permissions');
+    Route::delete('/admins/{admin}/permissions/{permission}', [AdminController::class, 'revokePermission'])->name('admins.permissions.revoke');
+
 
     Route::resource('/categories', CategoryController::class);
 

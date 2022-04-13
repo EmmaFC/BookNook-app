@@ -4,7 +4,7 @@
     <div class="py-12 w-full">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             {{-- <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg"> --}}
-               <a class="px-4 py-2 rounded-md bg-gray-400" href="{{ route('admin.roles.create') }}">Crear Rol</a>
+               <a class="px-4 py-2 rounded-md bg-gray-400" href="{{ route('admin.admins.create') }}">Crear Usuario</a>
                <!-- component -->
                 <link
                 href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
@@ -15,8 +15,8 @@
                         <table class="w-full table text-gray-400 border-separate {{-- space-y-6  --}} text-sm">
                             <thead class="bg-gray-800 text-gray-500">
                                 <tr>
-                                    <th class="p-3">Roles</th>
-                                    <th class="p-3">Permisos asociados</th>
+                                    <th class="p-3">Admins</th>
+                                    <th class="p-3">Roles asignados</th>
                                    {{--  <th class="p-3 text-left">Autor</th>
                                     <th class="p-3 text-left">Año</th>
                                     <th class="p-3 text-left"></th>
@@ -25,7 +25,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach ($roles as $role)
+                                @foreach ($admins as $admin)
                                 <tr class="bg-gray-800">
                                     {{-- <td class="p-3">
                                         <div class="flex align-items-center">
@@ -36,21 +36,19 @@
                                             </div>
                                         </div>
                                     </td> --}}
-                                    <td class="p-3 col-span-2"> {{ $role->name}} </td>
+                                    <td class="p-3"> {{ $admin->name}} </td>
 
-                                    @if ($role->permissions)
-                                    <td class="p-3 col-span-2">
-                                      @foreach ($role->permissions as $role_permission)
-                                        {{ $role_permission->name}},&nbsp
+                                    @if ($admin->roles)
+                                      @foreach ($admin->roles as $admin_role)
+                                        <td class="p-3"> {{ $admin_role->name}} </td>
                                       @endforeach
-                                    </td>
                                     @endif 
 
                                     <td class="p-3 ">
-                                        <a href="{{ route('admin.roles.edit', $role->id) }}" class="text-gray-400 hover:text-gray-100  mx-2">
+                                        <a href="{{ route('admin.admins.edit', $admin->id) }}" class="text-gray-400 hover:text-gray-100  mx-2">
                                             <i class="material-icons-outlined text-base">edit</i>
                                         </a>  
-                                        <form class="text-gray-400 hover:text-gray-100  ml-2" method="POST" action="{{ route('admin.roles.destroy', $role->id) }}" onsubmit="return confirm('¿Quieres eliminar este rol?');">
+                                        <form class="text-gray-400 hover:text-gray-100  ml-2" method="POST" action="{{ route('admin.admins.destroy', $admin->id) }}" onsubmit="return confirm('¿Quieres eliminar este admin?');">
                                             @csrf
                                             @method('DELETE')
                                             <button type="submit"> <i class="material-icons-round text-base">delete_outline</i></button>
@@ -63,10 +61,12 @@
                     {{-- </div> --}}
                {{--  </div>
                 </div> --}}
-            
+        
 
             {{-- </div> --}}
         </div>
     </div>
+
+
 
 @endsection
