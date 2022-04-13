@@ -1,0 +1,215 @@
+// Basic Layout
+html {
+    height: 100%;
+
+    body {
+
+        font-family: $roboto !important;
+        background-color: $body-color;
+        display:flex;
+        flex-direction: column;
+        min-height: 100vh;
+        
+        .main {
+            width: 80%;
+            margin: 0 auto;
+            padding: 1rem 0 4rem 0;
+        /*   display: flex;
+            justify-content: center;
+            align-items: center; */
+        }
+        
+        header {
+            .navbar-light {
+                background-color: transparent !important;
+                color: $dark-color;
+            }
+        }
+
+        .landingpage-bg {
+        /*   background-image: url('https://picsum.photos/200/300'); */
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+        }
+
+        footer {
+            .bg-dark{ 
+                background-color: $dark-color;
+                color: $white;
+            }
+        }
+    }
+}
+
+.brand-logo {
+    width : 27vw;
+}
+
+.book-cover-detail {
+    /* height : 100%;
+    width : 100%; */
+    /* height : 24rem; */
+    /* height : 60vh; */
+    width : 28vw;
+    margin:0;
+   /*  padding: inherit; */
+}
+
+.cover-overflow-hidden {
+
+    height : 67vh;
+    overflow: hidden;
+  
+}
+
+.specify-with{
+    width: 30vw;
+}
+
+.max-height{
+    height: inherit;
+}
+
+.max-with{
+    width: inherit;
+}
+
+.book-ranking {
+    width: 100px;
+    margin:0;
+}
+
+.pink {
+    color:$brand-color ;
+}
+
+.fluid-box {
+    height : 100%;
+    width : 90%;
+    margin-left: 3rem  !important;
+    padding :0 3rem !important;
+}
+
+.section-title {
+    font-family: $roboto-slab;
+    font-weight: 800;
+    font-size: 2.2rem;
+    letter-spacing:0.08em;
+    margin-bottom: 3rem;
+    width: 100%;
+    color:$third-color;
+    display: inline-block !important;
+}
+
+.nav-title {
+    font-family: $roboto-slab;
+    color: $gray;
+    font-weight: 600;
+    font-size: 2em;
+    letter-spacing:0.07em;
+    width:inherit;
+}
+
+.title {
+    font-family: $roboto-slab;
+    font-weight: 600;
+    font-size: 1.7em;
+    letter-spacing:0.07em;
+    margin-bottom: 1.5em;
+    width:inherit;
+}
+
+.subtitle {
+    font-family: $roboto-slab;
+    font-weight: 400;
+    font-size: 1.2em;
+    color:$secondary-color;
+    letter-spacing:0.07em;
+    margin-bottom: 0.9em;
+}
+
+.text {
+    font-family: $roboto;
+    font-weight:light;
+    font-size: 0.9em;
+    color:$third-color;
+    letter-spacing:0.05em;
+    margin-bottom: 0.6em;
+}
+
+.text-link {
+    font-family: $roboto !important;
+    font-weight:lighter !important;
+    font-size: 1.2em !important;
+    color:$dark-color !important;
+    letter-spacing:0.05em !important;
+    text-decoration: underline !important;
+}
+
+.nav-text {
+    font-family: $roboto-slab;
+    font-weight:light;
+    font-size: 1em;
+    color:$third-color;
+    letter-spacing:0.05em;
+    /* padding-right: 12%; */
+    margin-bottom: 0 !important;
+}
+
+.less-width {
+    width :80%;
+    margin:auto;
+}
+
+.text-less-width {
+    width :60%;
+}
+
+.profile-image-s {
+    border-radius: 100%;
+    width: 4.3rem;
+    height: 4.3rem;
+}
+
+.profile-image-m {
+    border-radius: 100%;
+    width: 11rem;
+    height: 11rem;
+}
+
+.box { 
+    height: 20rem !important;
+    margin: 2rem auto 5rem auto !important;
+}
+
+.table {
+    border-spacing: 0 15px;
+
+
+    i {
+        font-size: 1rem !important;
+    }
+
+    tr {
+        border-radius: 20px;
+        background-color: $white;
+
+        td {
+            padding-left: 2em;
+        }
+    }
+
+    tr td:nth-last-child(1),
+    tr th:nth-last-child(1) {
+        border-radius: 0 .625rem .625rem 0;
+        
+
+    }
+
+    tr td:nth-child(1),
+    tr th:nth-child(1) {
+        border-radius: .625rem 0 0 .625rem;
+    }
+}
+

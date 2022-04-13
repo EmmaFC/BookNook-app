@@ -1,0 +1,52 @@
+
+// Typography
+$roboto : 'Roboto', sans-serif;
+$roboto-slab : 'Roboto Slab', serif; 
+$font-size-base : 0.9rem;
+$line-height-base : 1.6;
+
+// Colors 
+$brand-color : #FFCBB5;
+$secondary-color : #383838;
+$third-color : #636363;
+$light-color : #F2F2F2;
+$dark-color : #262626;
+$dark : rgb(25, 25, 25);
+$gray : #8c8c8c;
+$white : #FFFFFF;
+$black : #000000;
+// Sizes
+$space-x-l : 6vw;
+$space-x-m : 4vw; 
+$space-x-s : 1.2vw;
+$space-y-l : 6vh;
+$space-y-m : 4vh; 
+$space-y-s : 1.2vh;
+
+//Bootstrap Variables
+
+    // Body
+    $body-bg : #f8fafc;
+    $body-color : $light-color;
+    $body-color-dark : $dark-color;
+
+$navbar-padding-y : $space-y-s;
+$navbar-padding-x : $space-x-s;
+
+/* _navbar.scss:42 */
+$navbar-brand-padding-y : $space-y-s;
+$navbar-padding-padding-x : $space-x-s;
+$navbar-brand-font-size : $font-size-base;
+
+
+
+// Breakpints
+/* $grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);
+ */

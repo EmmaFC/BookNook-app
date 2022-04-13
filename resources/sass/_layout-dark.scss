@@ -1,0 +1,116 @@
+//Dark theme
+
+.body-dark {
+    background-color: $body-color-dark !important;
+    color: $light-color;
+}
+
+.admin-nav {
+/*     font-family: $roboto-slab; */
+    font-weight: 200 !important;
+
+    padding: 1rem 0 1rem 0;
+    background-color: $dark;
+   /*  color: $body-bg; */
+}
+
+.navbar-dark {
+    font-family: $roboto-slab;
+    font-weight: 200 !important;
+    background-color: $third-color;
+    color: $body-bg;
+}
+
+.section-title-dark {
+    font-family: $roboto-slab;
+    font-weight: 800;
+    font-size: 3em;
+    letter-spacing:0.08em;
+    margin-bottom: 3rem;
+    width: 100%;
+    color:$light-color;
+    display: inline-block !important;
+}
+
+.title-dark {
+    font-family: $roboto-slab;
+    font-weight: 600;
+    font-size: 1.7em;
+    color:$white;
+    letter-spacing:0.07em;
+    margin-bottom: 1.5em;
+    width:inherit;
+}
+
+.subtitle-dark {
+    font-family: $roboto-slab;
+    font-weight: 400;
+    font-size: 1.2em;
+    color:$light-color;
+    letter-spacing:0.07em;
+    margin-bottom: 0.9em;
+}
+
+.text-button-dark {
+    font-family: $roboto;
+    font-weight:light;
+    font-size: 0.9em;
+    color:$light-color !important;
+    letter-spacing:0.05em;
+    /* margin-bottom: 0.6em; */
+}
+
+.icon-button-dark {
+    color:$light-color !important;
+    /* margin-bottom: 0.6em; */
+}
+
+.text-dark {
+    font-family: $roboto;
+    font-weight:light;
+    font-size: 0.9em;
+    color:$light-color !important;
+    letter-spacing:0.05em;
+    /* margin-bottom: 0.6em; */
+}
+
+.text-link-dark {
+    font-family: $roboto !important;
+    font-weight:lighter !important;
+    font-size: 1.2em !important;
+    color:$light-color !important;
+    letter-spacing:0.05em !important;
+    text-decoration: underline !important;
+}
+
+.nav-text-dark {
+    font-family: $roboto-slab;
+    font-weight:light;
+    font-size: 1em;
+    color:$gray !important;
+    letter-spacing:0.05em;
+    /* padding-right: 12%; */
+    margin-bottom: 0 !important;
+}
+
+.input-dark {
+    margin-bottom: 1rem;
+    font-family: $roboto-slab;
+    font-weight: 200 !important;
+    background-color: $secondary-color;
+    color: $light-color;
+    border-radius: 0.25rem;
+    display: block;
+    width: 100%;
+    padding: 0.7rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+  
+    /* 
+    background-clip: padding-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none; */
+   /*  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; */
+}
+
