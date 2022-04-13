@@ -3,10 +3,11 @@
 namespace App\View\Components;
 
 use Illuminate\View\Component;
+use Illuminate\Support\Facades\Auth;
 
 class Header extends Component
 {
-   /* public $user; */
+   public $user;
    public $profile_name;
    public $profile_image;
    public $id;
@@ -16,12 +17,12 @@ class Header extends Component
     *
     * @return void
     */
-   public function __construct(/* $id */)
+   public function __construct()
    {
-      /*  $this->user = User::findOrFail($id); */
-       $this->profile_name = 'Emma';
-       $this->profile_image = 'https://picsum.photos/200/30'; 
-       $this->id = 1;
+       $this->user = Auth::user();
+       $this->profile_name = $this->user->name;
+       $this->profile_image = $this->user->image; 
+       $this->id = $this->user->id;
    }
 
     /**

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Models\Book;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Spatie\Permission\Models\Role;
@@ -110,19 +111,17 @@ class UserController extends Controller
     public function show($id)
     {   
         $user = User::findOrFail($id);
-        
         $fav_books = array ();
      
         foreach($user->books as $fav_book)
         {
-           $book_id = $fav_book->pivot->book_id; // Correctly gets the book_id
-           $fav_book = Book::where('id', '=', $book_id)->first();
-           array_push($fav_books, $fav_book); 
+            $book_id = $fav_book->pivot->book_id; // Correctly gets the book_id
+            $fav_book = Book::where('id', '=', $book_id)->first();
+            array_push($fav_books, $fav_book); 
         }
-
         return view('pages.profile', [
             'id' => User::findOrFail($id),
-            'fav_books' => $fav_books
+            'fav_books' => $fav_books,
         ]);
 
     }

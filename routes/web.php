@@ -54,7 +54,10 @@ Route::get('/verify-email', [EmailVerificationPromptController::class, '__invoke
 Route::post('/verify-email/{id}/{hash}', [VerifyEmailController::class, '__invoke'])->name('verification.verify'); 
 Route::get('/sanctum/csrf-cookie', [CsrfCookieController::class, 'show'])->name('Laravel\Sanctum'); 
 
+
     Route::get('/admin-login', [UserController::class, 'admin'])->name('admin-login');
+
+
    /*  Route::get('/home', [HomeController::class, 'index'])->name('home'); */
     Route::get('/profile/{id}', [UserController::class, 'show'])->name('profile');
     Route::get('/book/{book}', [BookController::class, 'show'])->name('book-detail');

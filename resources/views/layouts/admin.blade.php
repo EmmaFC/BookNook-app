@@ -5,9 +5,7 @@
     <body class="body-dark">
         <div class="flex flex-col min-h-screen">   
 
-            <x-header 
-            :id='$id = 2'
-            />
+            <x-header  />
             @include('layouts.navigation')
 
             <main class="main flex flex-grow justify-center items-center">
