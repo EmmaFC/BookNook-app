@@ -1,11 +1,11 @@
-# MyINK-app
+# BookNook-app
 
-    This is a book APP project. It includes
+    This is a book APP project.
 
 
 ## features
 
-    
+    ...
 
 ### Installation
 
