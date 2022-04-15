@@ -149,14 +149,12 @@ class UserController extends Controller
      
         foreach($user->books as $fav_book)
         {
-            $book_id = $fav_book->pivot->book_id; // Correctly gets the book_id
-            $fav_book = Book::where('id', '=', $book_id)->first();
-            array_push($fav_books, $fav_book); 
+            if ($fav_book->pivot::where('is_favorite_book' == true)) 
+            {
+                $fav_book = Book::where('id', '=', $fav_book->pivot->book_id)->first();
+                array_push($fav_books, $fav_book); 
+            }         
         }
-        return view('pages.profile', [
-            'id' => User::findOrFail($id),
-            'fav_books' => $fav_books,
-        ]);
-
+        return view('pages.profile', ['id' => $user, 'fav_books' => $fav_books]);
     }
 }

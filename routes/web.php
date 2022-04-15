@@ -56,6 +56,7 @@ Route::post('/verify-email/{id}/{hash}', [VerifyEmailController::class, '__invok
 Route::get('/sanctum/csrf-cookie', [CsrfCookieController::class, 'show'])->name('Laravel\Sanctum'); 
 
     Route::get('/admin-login', [UserController::class, 'admin'])->name('admin-login');
+Route::group(['middleware' => 'auth'], function (){
 
    /*  Route::get('/home', [HomeController::class, 'index'])->name('home'); */
     Route::get('/profile/{id}', [UserController::class, 'show'])->name('profile');
@@ -65,7 +66,7 @@ Route::get('/sanctum/csrf-cookie', [CsrfCookieController::class, 'show'])->name(
     Route::patch('/password/{user}', [UserController::class, 'password_update'])->name('password.users.update');
     Route::get('/book/{book}', [BookController::class, 'show'])->name('book-detail');
     Route::get('/checkfavorite/{id}', [FavoritesController::class, 'checkFavorite'])->name('checkfavorite');
-    Route::get('/checkranking/{id}', [RankingController::class, 'checkRanking'])->name('checkranking');
+    Route::get('/checkranking/{id}/{stars}stars', [RankingController::class, 'checkRanking'])->name('checkranking');
 
 Route::middleware(['auth', 'role:admin'])->name('admin.')->prefix('admin')->group(function(){
 
@@ -100,6 +101,6 @@ Route::middleware(['auth', 'role:admin'])->name('admin.')->prefix('admin')->grou
     Route::delete('/books/{book}/categories/{category}', [BookController::class, 'detachCategory'])->name('books.categories.detach');
 
 });
-
+});
 
 require __DIR__.'/auth.php';

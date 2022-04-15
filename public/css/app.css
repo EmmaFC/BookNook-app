@@ -149,7 +149,6 @@ html body footer .bg-dark {
   font-weight: 600;
   font-size: 1.7em;
   letter-spacing: 0.07em;
-  margin-bottom: 1.5em;
   width: inherit;
 }
 
@@ -196,7 +195,7 @@ html body footer .bg-dark {
 }
 
 .text-less-width {
-  width: 60%;
+  width: 40vw;
 }
 
 .profile-image-s {

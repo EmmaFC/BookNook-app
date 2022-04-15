@@ -18,7 +18,11 @@ class BookController extends Controller
     public function show($book) 
     {        
         $current_book = Book::where('id', '=', $book)->first();
-        return view('pages.book-detail', ['book' => $current_book] );
+        // return view('pages.book-detail', ['book' => $current_book] );
+        if (!isset($stars_number)){
+            $stars_number = 0;
+        }
+        return view('pages.book-detail', ['book' => $current_book, 'stars_number' => $stars_number] );
     }
 
     public function create ()

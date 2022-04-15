@@ -22,6 +22,12 @@ return new class extends Migration
             $table->foreign('book_id')->references('id')->on('books')->onDelete('cascade');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
 
+            // $table->boolean('is_favorite_book')->nullable();
+            // $table->integer('stars_ranking')->nullable();
+            // $table->integer('reading_starting_date')->nullable();
+            // $table->integer('reading_ending_date')->nullable();
+            // $table->integer('reading_progress_page')->nullable();
+
             $table->timestamps();
             
         });

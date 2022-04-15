@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Models\Star;
 use App\Models\Category;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -33,12 +34,7 @@ class Book extends Model
 
     public function users ()
     {
-        return $this->belongsToMany(User::class);
+        return $this->belongsToMany(User::class, 'book_user')->withPivot('is_favorite_book', 'stars_ranking', 'reading_starting_date', 'reading_ending_date','reading_progress');
     }
-
-    public function usersRanked()
-    {
-        return $this->belongsToMany(User::class)->withPivot(["ranking"]);
-    } 
 
 }
