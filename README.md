@@ -4,23 +4,23 @@
 
 ## Características
 
-    ### Mobile-first
-    ### CRUD libros
-    ### Añadir libro a favoritos
-    ### Marcar ranking de libro
-    ### Permisos de administración
-    ### UX/UI
+    - Mobile-first
+    - CRUD libros
+    - Añadir libro a favoritos
+    - Marcar ranking de libro
+    - Permisos de administración
+    - UX/UI
     
     
 ### Tecnologías y lenguajes
 
-    ### PHP
-    ### Laravel
-    ### Livewire
-    ### Blade
-    ### Spatie
-    ### Tailwind CSS
-    ### SASS
+    - PHP
+    - Laravel
+    - Livewire
+    - Blade
+    - Spatie
+    - Tailwind CSS
+    - SASS
 
 
 ### Installation
