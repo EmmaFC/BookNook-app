@@ -1,11 +1,27 @@
 # BookNook-app
 
-    This is a book APP project.
+    Proyecto de desarrollo de aplicación de libros.
 
+## Características
 
-## features
+    ### MObile-first
+    ### CRUD libros
+    ### Añadir libro a favoritos
+    ### Marcar ranking de libro
+    ### Permisos de administración
+    ### UX/UI
+    
+    
+### Tecnologías y lenguajes
 
-    ...
+    ### PHP
+    ### Laravel
+    ### Livewire
+    ### Blade
+    ### Spatie
+    ### Tailwind CSS
+    ### SASS
+
 
 ### Installation
 
@@ -15,6 +31,7 @@
     - php artisan ui bootstrap --auth
     - npm install && npm run dev
 
-### By
+
+### Creado por
 
     - Emma Fdez.
