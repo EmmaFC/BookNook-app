@@ -4,7 +4,7 @@
 
 ## Características
 
-    ### MObile-first
+    ### Mobile-first
     ### CRUD libros
     ### Añadir libro a favoritos
     ### Marcar ranking de libro
