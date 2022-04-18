@@ -64,6 +64,10 @@ html body .main footer .bg-dark {
   color: #FFFFFF;
 }
 
+.landing-page-bg {
+  box-shadow: 0 0 55px rgba(0, 0, 0, 0.07), inset 0 5px 81px rgba(0, 0, 0, 0.75);
+}
+
 .brand-logo {
   width: 27vw;
 }
