@@ -22,7 +22,10 @@ Route::get('/dashboard', [HomeController::class, 'index'])->middleware(['auth'])
 Route::get('/home', [HomeController::class, 'index'])->middleware(['auth'])->name('home');
 Route::get('/admin-login', [UserController::class, 'admin'])->name('admin-login');
 
+
+
 Route::group(['middleware' => 'auth'], function (){
+
 
    /*  Route::get('/home', [HomeController::class, 'index'])->name('home'); */
     Route::get('/profile/{id}', [UserController::class, 'show'])->name('profile');
@@ -34,7 +37,10 @@ Route::group(['middleware' => 'auth'], function (){
     Route::get('/checkfavorite/{id}', [FavoritesController::class, 'checkFavorite'])->name('checkfavorite');
     Route::get('/checkranking/{id}/{stars}stars', [RankingController::class, 'checkRanking'])->name('checkranking');
 
+
+
     Route::middleware(['auth', 'role:admin'])->name('admin.')->prefix('admin')->group(function(){
+
 
         /*  Route::get('/', [IndexController::class, index])->name('index'); */
         Route::resource('/roles', RoleController::class);
@@ -62,6 +68,8 @@ Route::group(['middleware' => 'auth'], function (){
         Route::resource('/books', BookController::class);
         Route::post('/books/{book}/categories', [BookController::class, 'attachCategory'])->name('books.categories');
         Route::delete('/books/{book}/categories/{category}', [BookController::class, 'detachCategory'])->name('books.categories.detach');
+
+
 
     });
 });
