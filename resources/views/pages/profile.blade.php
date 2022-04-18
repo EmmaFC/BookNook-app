@@ -1,15 +1,15 @@
   @extends('layouts.app')
   @section('content')
 
-          <div {{-- class="col-12" --}}>         
+          <div>         
               <div class="flex justify-start"><h1 class="section-title">{{ __('Tu perfil') }}</h1></div>
-                <div id="user_section" class="{{-- container --}} flex justify-evenly fluid mb-6"> 
-                    {{-- <div class="flex justify-center"> --}}
+                <div id="user_section" class="flex justify-evenly fluid mb-6"> 
+ 
                         {{--  @if(Auth::user()->image)
                         <img class="profile-image-m" src="{{asset('/storage/images/'.Auth::user()->image)}}">
                         @endif --}}
                         <img class="profile-image-m" src="{{ Auth::user()->image }}" />
-                   {{--  </div> --}}
+             
                     <div class="text-less-width self-center flex flex-row ml-14"> 
                         <div class=" flex flex-col ">
                             <div class="title mb-4">{{ Auth::user()->name }}</div>

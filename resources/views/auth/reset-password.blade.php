@@ -48,7 +48,7 @@
 
                 <a class="px-4 py-2 text-link-dark" href="{{ URL::previous() }}" >Volver a editar perfil</a>
           
-                <x-button class="text-dark px-4 py-2 rounded-md bg-gray-400" >
+                <x-button class="text-dark px-4 py-2 rounded-md" >
                     {{ __('Reset Password') }}
                 </x-button>
             </div>

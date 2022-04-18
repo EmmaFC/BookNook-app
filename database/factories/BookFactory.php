@@ -22,7 +22,7 @@ class BookFactory extends Factory
             'author' => $this->faker->name(),
             'year' => $this->faker->year(),
             'genre' => $this->faker->name(),
-            'cover' => 'https://picsum.photos/200/300',
+            'cover' => 'https://picsum.photos/200/300?nocache=' .microtime(),
             'pages' => $this->faker->numberBetween(80,525),
             'description' => $this->faker->text(),
             'collection' => $this->faker->name(),

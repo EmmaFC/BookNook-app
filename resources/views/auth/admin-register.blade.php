@@ -10,7 +10,7 @@
             <div class="container-second">
 
             <div  class="container-second">
-{{-- 
+                {{-- 
                     <div class="card">
                         @if (isset($user->image ))
                         <img class="profile-image-m" src="{{asset('/storage/images/'.Auth::user()->image)}}" alt="Card image cap">

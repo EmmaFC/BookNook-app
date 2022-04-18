@@ -2,8 +2,8 @@
     <div class="less-width flex align-center flex-row justify-center text-gray-500">
         <h3 class="pl-2 text-sm flex items-center transition duration-200 ease-in">
             <button class="px-6 py-2 rounded-md flex flex-row bg-gray-600 hover:text-gray-100" type="submit"> 
-{{--                 <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="h-5 w-5 mr-2" role="img"preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"> --}}
-    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="h-5 w-5 mr-2" role="img"preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2 6s1.5-2 5-2s5 2 5 2v14s-1.5-1-5-1s-5 1-5 1V6Zm10 0s1.5-2 5-2s5 2 5 2v14s-1.5-1-5-1s-5 1-5 1V6Z"/></svg>
+{{--            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="h-5 w-5 mr-2" role="img"preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"> --}}
+                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="h-5 w-5 mr-2" role="img"preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2 6s1.5-2 5-2s5 2 5 2v14s-1.5-1-5-1s-5 1-5 1V6Zm10 0s1.5-2 5-2s5 2 5 2v14s-1.5-1-5-1s-5 1-5 1V6Z"/></svg>
                 <a class="text-button-dark  hover:text-white transition duration-200 ease-linear" href="{{ route('admin.books.index')}}">Libros</a>
             </button>
         </h3>

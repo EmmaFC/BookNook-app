@@ -18,7 +18,7 @@
                             @endif
                         </div> 
                         
-                        <input id="image" class="input-dark mt-6" type="file" name="image" value="https://picsum.photos/200/300" placeholder="{{ __('imagen de perfil') }}" @error('image') is-invalid @enderror" required autocomplete="current-image">
+                        <input id="image" class="input-dark mt-6" type="file" name="image" value="https://picsum.photos/200/300" placeholder="{{ __('imagen de perfil') }}" @error('image') is-invalid @enderror>
                         @error('image')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
@@ -57,12 +57,12 @@
                     </div>
 
                 </div>
-            </div>
-            <div class="container-2 mt-4 flex justify-between align-center">
-                <a class="px-4 py-2 text-link-dark" href="{{  route('profile', $user->id) }}" >Volver a mi perfil</a>
-                <a class="text-link-dark hover:text-white transition duration-200 ease-linear" href="{{ route('password.reset', Auth::user() )}}">Cambiar contraseña</a>
-                <button type="submit" class="px-4 py-2 rounded-md bg-gray-400"><h4 class="text-dark">Guardar Cambios</h4></button>
-            </div>
+                </div>
+                <div class="container-2 mt-4 flex justify-between align-center">
+                    <a class="px-4 py-2 text-link-dark" href="{{  route('profile', $user->id) }}" >Volver a mi perfil</a>
+                    <a class="text-link-dark hover:text-white transition duration-200 ease-linear" href="{{ route('password.reset', Auth::user() )}}">Cambiar contraseña</a>
+                    <button type="submit" class="px-4 py-2 rounded-md bg-gray-400"><h4 class="text-dark">Guardar Cambios</h4></button>
+                </div>
             </form>      
             
         </div>

@@ -2,13 +2,13 @@
 @section('content')
     <div class="py-12 w-full">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-           {{--   <form action="{{ route('admin.users.update', $user) }}" method="POST" enctype="multipart/form-data">
+             <form action="{{ route('admin.users.update', $user) }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 @method('PATCH')
                 <div class="container-second">
-                    <div class="container-second">  --}}
+                    <div class="container-second">  
 
-                           {{-- <div class="card">
+                         {{--   {{-- <div class="card">
                             @if (isset($user->image ))
                             <img class="profile-image-m" src="{{asset('/storage/images/'.Auth::user()->image)}}" alt="Card image cap">
                             @else
@@ -21,7 +21,7 @@
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
                             </span>
-                        @enderror 
+                        @enderror  --}}
 
                        <input id="name" type="text" class="input-dark" value="{{ $user->name }}" placeholder="{{ __('nombre') }}" @error('name') is-invalid @enderror 
                         name="name" 
@@ -52,7 +52,7 @@
                         @enderror
                 
                         <input id="password" type="password" class="input-dark" @error('password') is-invalid @enderror
-                        placeholder="{{ __('contraseña') }}" name="password" required autocomplete="new-password">
+                        placeholder="{{ __('contraseña') }}" name="password">
 
                         @error('password')
                             <span class="invalid-feedback" role="alert">
@@ -61,7 +61,7 @@
                         @enderror
                     
                         <input id="password-confirm" type="password" class="input-dark"
-                        placeholder="{{ __('confirmar contraseña') }}" name="password_confirmation" required autocomplete="new-password">
+                        placeholder="{{ __('confirmar contraseña') }}" name="password_confirmation">
                         
                     </div>
                     <div class="container-second mt-4 mb-4 d-flex justify-content-between align-content-center">
@@ -69,7 +69,7 @@
                         <button type="submit" class="px-4 py-2 rounded-md bg-gray-400"><h4 class="text-link-dark">Guardar Cambios</h4></button>
                     </div>
                 </div>
-            </form>       --}}
+            </form>      
             <div>
                 @if ($user->roles)
                     @foreach ($user->roles as $user_role)

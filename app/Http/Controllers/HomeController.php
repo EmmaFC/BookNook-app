@@ -34,7 +34,8 @@ class HomeController extends Controller
 
     public function landingpage ()
     {
-        $random_book = Book::inRandomOrder()->first();
+        // $random_book = Book::inRandomOrder()->first();
+        $random_book = 'https://picsum.photos/1024/1024?nocache='.microtime().'';
         return view('welcome', compact('random_book'));
     }
 
