@@ -4,6 +4,7 @@
     <div class="py-12 w-full">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             {{-- <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg"> --}}
+                <input class="w-full p-4 mb-6" type="text" placeholder="Buscar...">
                <a class="px-4 py-2 rounded-md bg-gray-400" href="{{ route('admin.categories.create') }}">Crear Categoría</a>
                <!-- component -->
                 <link
